@@ -1,0 +1,493 @@
+{
+  "source": "Adden-main-2/src/mcp/server.py",
+  "inspected": "2026-10-01",
+  "deploymentVerified": false,
+  "tools": [
+    {
+      "name": "health_check",
+      "parameters": [],
+      "readOnlyHint": true,
+      "title": "Check Connection"
+    },
+    {
+      "name": "list_adaccounts",
+      "parameters": [],
+      "readOnlyHint": true,
+      "title": "List Ad Accounts"
+    },
+    {
+      "name": "get_metrics",
+      "parameters": [
+        "adaccount_platform_id",
+        "date_range",
+        "metrics",
+        "interval",
+        "breakdown",
+        "filters",
+        "order_by",
+        "limit",
+        "analysis_scope"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Ad Account Metrics"
+    },
+    {
+      "name": "request_competitor_brand",
+      "parameters": [
+        "page_id",
+        "brand_name"
+      ],
+      "readOnlyHint": false,
+      "title": "Request Competitor Brand"
+    },
+    {
+      "name": "follow_brand",
+      "parameters": [
+        "page_id",
+        "brand_name"
+      ],
+      "readOnlyHint": false,
+      "title": "Follow Competitor Brand"
+    },
+    {
+      "name": "get_ads",
+      "parameters": [
+        "brand_name_filter",
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Competitor Ads"
+    },
+    {
+      "name": "get_recent_ads",
+      "parameters": [
+        "brand_name_filter",
+        "date_range",
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Recent Competitor Ads"
+    },
+    {
+      "name": "search_brand",
+      "parameters": [
+        "brand_name"
+      ],
+      "readOnlyHint": true,
+      "title": "Search Competitor Brands"
+    },
+    {
+      "name": "get_top_performing_ads",
+      "parameters": [
+        "brand_filter",
+        "page_id",
+        "industry",
+        "page",
+        "page_size",
+        "aggregate_on",
+        "tag_type_key",
+        "sort"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Top Performing Ads"
+    },
+    {
+      "name": "get_winning_tags",
+      "parameters": [
+        "brand_filter",
+        "page_id",
+        "industry",
+        "top_n"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Winning Creative Tags"
+    },
+    {
+      "name": "get_trend_analysis",
+      "parameters": [
+        "scope",
+        "page_id",
+        "vertical",
+        "tag_limit",
+        "max_limit",
+        "range_days",
+        "include_sample_ads"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Trend Analysis"
+    },
+    {
+      "name": "list_trend_industries",
+      "parameters": [],
+      "readOnlyHint": true,
+      "title": "List Trend Industries"
+    },
+    {
+      "name": "get_brand_analysis_section",
+      "parameters": [
+        "page_id",
+        "section",
+        "organisation_id",
+        "group_label"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Brand Analysis Section"
+    },
+    {
+      "name": "fetch_brand",
+      "parameters": [
+        "page_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Fetch Brand Intelligence"
+    },
+    {
+      "name": "get_combination_insights",
+      "parameters": [
+        "adaccount_id",
+        "axes",
+        "days_limit",
+        "top_winning",
+        "top_losing"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Creative Combination Insights"
+    },
+    {
+      "name": "get_fatigue_diagnosis",
+      "parameters": [
+        "adaccount_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Creative Fatigue Diagnosis"
+    },
+    {
+      "name": "trigger_instagram_post_analysis",
+      "parameters": [
+        "post_url"
+      ],
+      "readOnlyHint": false,
+      "title": "Analyze Instagram Post"
+    },
+    {
+      "name": "get_instagram_post_analysis",
+      "parameters": [
+        "run_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Instagram Post Analysis"
+    },
+    {
+      "name": "trigger_instagram_profile_analysis",
+      "parameters": [
+        "username",
+        "n_posts"
+      ],
+      "readOnlyHint": false,
+      "title": "Analyze Instagram Profile"
+    },
+    {
+      "name": "get_instagram_profile_analysis",
+      "parameters": [
+        "run_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Instagram Profile Analysis"
+    },
+    {
+      "name": "list_saved_ads",
+      "parameters": [
+        "page",
+        "page_size",
+        "creative_type",
+        "has_transcript",
+        "saved_after",
+        "saved_before",
+        "sort_by",
+        "tags"
+      ],
+      "readOnlyHint": true,
+      "title": "List Saved Ads"
+    },
+    {
+      "name": "list_boards",
+      "parameters": [],
+      "readOnlyHint": true,
+      "title": "List Swipe Boards"
+    },
+    {
+      "name": "get_board",
+      "parameters": [
+        "board_id",
+        "page",
+        "page_size",
+        "sort_by"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Swipe Board"
+    },
+    {
+      "name": "list_followed_brands",
+      "parameters": [
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "List Followed Brands"
+    },
+    {
+      "name": "get_image_generation",
+      "parameters": [
+        "task_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Generated Image"
+    },
+    {
+      "name": "list_image_creations",
+      "parameters": [
+        "offset",
+        "limit"
+      ],
+      "readOnlyHint": true,
+      "title": "List Image Creations"
+    },
+    {
+      "name": "get_video_generation",
+      "parameters": [
+        "task_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Generated Video"
+    },
+    {
+      "name": "list_video_creations",
+      "parameters": [
+        "offset",
+        "limit"
+      ],
+      "readOnlyHint": true,
+      "title": "List Video Creations"
+    },
+    {
+      "name": "render_creative",
+      "parameters": [
+        "image_urls",
+        "creative_ids"
+      ],
+      "readOnlyHint": true,
+      "title": "Render Creative Image"
+    },
+    {
+      "name": "trigger_meta_instagram_analysis",
+      "parameters": [
+        "content_id",
+        "platform"
+      ],
+      "readOnlyHint": false,
+      "title": "Analyze Meta Instagram Account"
+    },
+    {
+      "name": "get_meta_instagram_analysis",
+      "parameters": [
+        "analysis_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Meta Instagram Analysis"
+    },
+    {
+      "name": "upload_analysis_product_image",
+      "parameters": [
+        "image_base64",
+        "brand_guideline_id",
+        "brand_name"
+      ],
+      "readOnlyHint": false,
+      "title": "Upload Product Reference Images"
+    },
+    {
+      "name": "generate_instagram_script_versions",
+      "parameters": [
+        "analysis_id",
+        "product_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Generate Instagram Script Angles"
+    },
+    {
+      "name": "trigger_instagram_script_generation",
+      "parameters": [
+        "analysis_id",
+        "product_id",
+        "version_label",
+        "target_duration"
+      ],
+      "readOnlyHint": false,
+      "title": "Generate Instagram Script"
+    },
+    {
+      "name": "get_instagram_script_generation",
+      "parameters": [
+        "script_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Generated Instagram Script"
+    },
+    {
+      "name": "list_instagram_analyses",
+      "parameters": [
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "List Instagram Analyses"
+    },
+    {
+      "name": "list_instagram_scripts",
+      "parameters": [
+        "analysis_id",
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "List Instagram Scripts"
+    },
+    {
+      "name": "search_instagram_posts",
+      "parameters": [
+        "search_query",
+        "username",
+        "profile_id",
+        "brand_name",
+        "tags",
+        "industry",
+        "creative_type",
+        "content_style",
+        "video_length",
+        "language",
+        "start_date",
+        "end_date",
+        "sort",
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "Search Instagram Posts"
+    },
+    {
+      "name": "get_followed_instagram_posts",
+      "parameters": [
+        "username",
+        "profile_id",
+        "brand_name",
+        "tags",
+        "industry",
+        "creative_type",
+        "language",
+        "sort",
+        "page",
+        "page_size"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Instagram Posts"
+    },
+    {
+      "name": "trigger_instagram_profile_sync",
+      "parameters": [
+        "username"
+      ],
+      "readOnlyHint": false,
+      "title": "Sync Instagram Profile"
+    },
+    {
+      "name": "list_instagram_sync_runs",
+      "parameters": [
+        "username",
+        "profile_id",
+        "request_type"
+      ],
+      "readOnlyHint": true,
+      "title": "List Instagram Sync Runs"
+    },
+    {
+      "name": "get_tracked_profile_overview",
+      "parameters": [
+        "username",
+        "profile_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Overview"
+    },
+    {
+      "name": "get_tracked_profile_formats",
+      "parameters": [
+        "username",
+        "profile_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Formats"
+    },
+    {
+      "name": "get_tracked_profile_videos",
+      "parameters": [
+        "username",
+        "profile_id",
+        "tab",
+        "sort",
+        "page",
+        "page_size",
+        "include_tabs",
+        "include_ai_tags"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Videos"
+    },
+    {
+      "name": "get_tracked_profile_tag_videos",
+      "parameters": [
+        "source",
+        "tag_type",
+        "username",
+        "profile_id",
+        "sort",
+        "page",
+        "page_size",
+        "include_ai_tags"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Videos by Tag"
+    },
+    {
+      "name": "get_tracked_profile_top_videos",
+      "parameters": [
+        "username",
+        "profile_id",
+        "limit",
+        "include_ai_tags"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Top Videos"
+    },
+    {
+      "name": "get_tracked_profile_hooks",
+      "parameters": [
+        "username",
+        "profile_id"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Hooks"
+    },
+    {
+      "name": "get_tracked_profile_timeline",
+      "parameters": [
+        "username",
+        "profile_id",
+        "limit"
+      ],
+      "readOnlyHint": true,
+      "title": "Get Tracked Profile Timeline"
+    }
+  ]
+}

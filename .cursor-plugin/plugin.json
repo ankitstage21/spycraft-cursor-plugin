@@ -1,0 +1,21 @@
+{
+  "name": "spycraft",
+  "version": "0.1.0",
+  "description": "Research competitor ads, analyze connected campaign performance, and draft creative briefs with Spycraft intelligence.",
+  "author": {
+    "name": "Spycraft"
+  },
+  "license": "MIT",
+  "keywords": [
+    "spycraft",
+    "marketing",
+    "competitor-research",
+    "advertising",
+    "instagram",
+    "mcp"
+  ],
+  "logo": "assets/logo.svg",
+  "skills": "skills/",
+  "mcpServers": "mcp.json",
+  "repository": "https://github.com/ankitstage21/spycraft-cursor-plugin"
+}
