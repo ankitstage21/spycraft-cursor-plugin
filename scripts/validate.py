@@ -18,7 +18,7 @@ try:
     check(bool(re.fullmatch(r'[a-z0-9]+(?:[.-][a-z0-9]+)*', manifest['name'])), 'Plugin identifier')
     check(bool(re.fullmatch(r'\d+\.\d+\.\d+', manifest['version'])), 'Semantic version')
     check(bool(manifest.get('description')) and bool(manifest.get('author', {}).get('name')), 'Description and author')
-    for field in ('skills', 'mcpServers', 'logo'):
+    for field in ('skills', 'agents', 'mcpServers', 'logo'):
         value = manifest[field]
         check(not Path(value).is_absolute() and '..' not in Path(value).parts and (root / value).exists(), f'Relative {field} path')
     mcp = json.loads((root / manifest['mcpServers']).read_text())
@@ -38,6 +38,19 @@ try:
         for name in re.findall(r'`([a-z]+(?:_[a-z]+)+)`', content):
             if name not in {'page_id', 'run_id', 'not_followed', 'poll_after_seconds'}:
                 check(name in source_tools, f'{skill.parent.name} tool exists in source: {name}')
+    agents = sorted((root / manifest['agents']).glob('*.md'))
+    check(len(agents) == 3, 'Three discovered agents')
+    agent_names = set()
+    for agent in agents:
+        content = agent.read_text()
+        fm = re.match(r'^---\nname: ([a-z0-9-]+)\ndescription: ([^\n]+)\n---\n', content)
+        check(bool(fm) and fm[1] == agent.stem and fm[1] not in agent_names, f'{agent.stem} frontmatter')
+        if fm:
+            agent_names.add(fm[1])
+        check('../docs/OPERATING-CONTRACT.md' in content, f'{agent.stem} operating contract')
+        refs = re.findall(r'`(\.\./(?:docs|skills)/[^`]+\.md)`', content)
+        check(bool(refs) and all((agent.parent / ref).is_file() for ref in refs), f'{agent.stem} referenced files exist')
+        check('## Deliverable' in content and '## Handoff format' in content, f'{agent.stem} output and handoff')
     svg = ET.parse(root / manifest['logo']).getroot()
     check(svg.tag.endswith('svg'), 'Logo SVG parses')
     check(not any(el.tag.endswith('script') or any(k.rsplit('}', 1)[-1].lower().startswith('on') for k in el.attrib) for el in svg.iter()), 'Logo has no script/event attributes')

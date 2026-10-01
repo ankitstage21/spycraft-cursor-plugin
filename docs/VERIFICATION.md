@@ -25,3 +25,14 @@ Submission preparation 0.1.0-prep2: copy-ready listing and repository instructio
 The final submission archive uses repository-root paths and omits the internal PROJECT-STATUS.md.
 Static validation was repeated: 50 checks passed, 0 failed. The signed-out publish page was
 visibly inspected and required Cursor login; no publisher application was submitted.
+
+
+## Agent update — v0.2.0
+
+Added Content Strategist, Hooks & Scripts, and Meta Ads Strategist with valid Cursor
+agent frontmatter, explicit manifest registration, shared operating rules, supporting skill
+references, scoped deliverables and handoff guidance. See docs/AGENT-EXAMPLES.md for manual
+acceptance scenarios. Client discovery, runtime delegation, and authenticated execution are
+UNVERIFIED; no agent invocation was run inside Cursor or Grok Bot.
+
+Static validation for v0.2.0: PASS — 64 checks, 0 failures; agent frontmatter, manifest path, supporting file references, and deliverable/handoff sections verified. Runtime client behavior remains UNVERIFIED.

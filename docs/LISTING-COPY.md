@@ -1,6 +1,6 @@
 # Spycraft — copy-ready listing
 
-Prepared 2026-10-01 for version 0.1.0. These are reusable answers, not a claim
+Prepared 2026-10-01 for version 0.2.0. These are reusable answers, not a claim
 that the signed-in publisher application uses these exact field labels.
 
 ## Plugin name
@@ -10,16 +10,14 @@ Spycraft
 spycraft
 
 ## Short description
-Research competitor ads, analyze connected campaign performance, and draft creative briefs with Spycraft intelligence.
+Plan Instagram and TikTok content, develop hooks and scripts, and research Meta ad creative with Spycraft agents and OAuth MCP intelligence.
 
 ## Full description
-Spycraft connects your AI assistant to competitor advertising intelligence and your authorized advertising account data through a remote MCP service.
+Spycraft helps you turn Instagram and TikTok content inspiration into original marketing ideas. Its Content Strategist plans content pillars and calendars, Hooks & Scripts develops compelling openings and short-form scripts, and Meta Ads Strategist turns ad research into creative concepts and test plans.
 
-Research competitor brands and ad examples, identify recurring hooks and creative formats, review connected campaign metrics, and turn those findings into original creative briefs. Instagram research workflows can retrieve existing insights or manage explicitly requested profile and post analysis jobs.
+Explore competitor hooks, formats, messaging and offers through Spycraft's advertising and Instagram intelligence. Review authorized campaign data where available, then develop original concepts for organic content and Meta ads. Each agent separates observed evidence from proposed ideas and keeps product claims grounded in your actual offer.
 
-The plugin includes five workflows: connection setup, competitor research, campaign analysis, creative briefs, and Instagram research. It uses browser-based OAuth authentication so each user can choose their Spycraft organization without adding API keys to the plugin.
-
-A Spycraft account with appropriate MCP access is required. Campaign reporting requires an eligible connected advertising account. Available tools and data depend on the user's subscription and the deployed service.
+The plugin includes three dedicated agents, five supporting skills and a browser-based OAuth connection. A Spycraft account with appropriate MCP access is required. Direct TikTok data retrieval is not established by the current tool snapshot; TikTok planning can use supplied examples or available public research.
 
 ## Publisher / organization
 Spycraft

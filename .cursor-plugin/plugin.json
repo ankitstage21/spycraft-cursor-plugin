@@ -1,7 +1,7 @@
 {
   "name": "spycraft",
-  "version": "0.1.0",
-  "description": "Research competitor ads, analyze connected campaign performance, and draft creative briefs with Spycraft intelligence.",
+  "version": "0.2.0",
+  "description": "Plan Instagram and TikTok content, develop hooks and scripts, and research Meta ad creative with Spycraft agents and OAuth MCP intelligence.",
   "author": {
     "name": "Spycraft"
   },
@@ -12,10 +12,15 @@
     "competitor-research",
     "advertising",
     "instagram",
-    "mcp"
+    "mcp",
+    "content-marketing",
+    "tiktok",
+    "hooks",
+    "meta-ads"
   ],
   "logo": "assets/logo.svg",
   "skills": "skills/",
   "mcpServers": "mcp.json",
-  "repository": "https://github.com/ankitstage21/spycraft-cursor-plugin"
+  "repository": "https://github.com/ankitstage21/spycraft-cursor-plugin",
+  "agents": "agents/"
 }

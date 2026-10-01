@@ -1,11 +1,24 @@
 # Spycraft
 
-Research competitor advertising, review connected campaign results, and turn creative
-intelligence into original briefs with Spycraft's remote MCP service.
+Plan Instagram and TikTok content marketing, develop original hooks and scripts, and
+research Meta ad creative with dedicated agents and Spycraft's remote MCP service.
 
-Version **0.1.0 — submission candidate**. Package checks pass; authenticated Cursor/Grok Bot
+Version **0.2.0 — submission candidate**. Package checks pass; authenticated Cursor/Grok Bot
 execution is not yet verified. This package contains workflows and connection configuration;
 Spycraft runs the backend. It does not contain the Adden application or credentials.
+
+## Dedicated agents
+
+| Agent | Responsibility |
+|---|---|
+| Content Strategist | Instagram and TikTok content pillars, concepts, calendars and learning plans |
+| Hooks & Scripts | Original opening hooks, short-form scripts, shot direction, captions and variants |
+| Meta Ads Strategist | Competitor ad research, first-party creative insights and paid creative test plans |
+
+Agent definitions live in `agents/` and are registered in the manifest. They can share structured
+briefs where the client supports delegation; they do not automatically create persistent Bots.
+TikTok creative planning is included. Direct TikTok data retrieval is not established by the current
+Spycraft tool snapshot; research uses supplied examples or available public browsing.
 
 ## Included workflows
 
@@ -32,7 +45,7 @@ Public metadata advertises `mcp:basic` and PKCE S256. That alone does not verify
 
 Copy this directory's contents into `~/.cursor/plugins/local/spycraft/`, preserving hidden
 `.cursor-plugin/` files. Restart Cursor or run **Developer: Reload Window**. Open **Customize**
-and confirm all five skills and the Spycraft MCP server. Local plugin imports must be allowed
+and confirm all three agents, five skills and the Spycraft MCP server. Local plugin imports must be allowed
 by your organization. Use a real directory; Cursor skips symlinks pointing outside its local folder.
 
 Ask: "Use spycraft-connect to verify my organization and list my eligible ad accounts."

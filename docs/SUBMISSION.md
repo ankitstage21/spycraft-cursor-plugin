@@ -1,11 +1,11 @@
-# Submission checklist — v0.1.0
+# Submission checklist — v0.2.0
 
 [Copy-ready listing](LISTING-COPY.md) · [Repository setup](REPOSITORY-SETUP.md)
 
 Prepared listing:
 - Name: Spycraft
 - Identifier: spycraft (Marketplace uniqueness UNVERIFIED)
-- Summary: Research competitor ads, analyze connected campaign performance, and draft creative briefs with Spycraft intelligence.
+- Summary: Plan Instagram and TikTok content, develop hooks and scripts, and research Meta ad creative with Spycraft agents and OAuth MCP intelligence.
 - Publisher: Spycraft (owner confirmation required before release)
 - Proposed package license: MIT (owner confirmation required before release)
 - Logo: assets/logo.svg, copied from supplied Adden source (public redistribution rights UNVERIFIED)
@@ -13,7 +13,7 @@ Prepared listing:
 
 ## Completed package work
 
-- Cursor manifest, remote MCP configuration, five skill files, source-backed tool snapshot.
+- Cursor manifest, remote MCP configuration, three agent definitions, five skill files, source-backed tool snapshot.
 - Usage, OAuth, action boundaries, troubleshooting, and honest data coverage guidance.
 - Static validation script; run it after edits.
 - Public OAuth authorization/protected-resource metadata returned HTTP 200 on 2026-10-01.
@@ -22,7 +22,7 @@ Prepared listing:
 ## Required live smoke tests
 
 1. Install a real copy in Cursor's local plugin directory and reload.
-2. Confirm all five skills and the Spycraft MCP server are discovered.
+2. Confirm all three agents, five skills and the Spycraft MCP server are discovered.
 3. Complete OAuth, select the intended organization, and call health_check.
 4. List authorized accounts and fetch one small permitted metrics result.
 5. Search one known competitor and retrieve available ad examples.
